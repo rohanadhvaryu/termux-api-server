@@ -3,6 +3,7 @@
     "id": "deploy",
     "execute-command": "/data/data/com.termux/files/home/apps/api/deploy.sh",
     "command-working-directory": "/data/data/com.termux/files/home/apps/api",
-    "response-message": "Deploy triggered"
+    "response-message": "Deploy triggered",
+    "include-command-output-in-response": true
   }
 ]
