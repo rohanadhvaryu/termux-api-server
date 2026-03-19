@@ -1,10 +1,14 @@
 const http = require("http");
+require('dotenv').config();
+
+const PORT = process.env.PORT || 3000;
+const MESSAGE = process.env.MESSAGE || "Default message";
 
 const server = http.createServer((req, res) => {
     if (req.url === "/api") {
         res.writeHead(200, { "Content-Type": "application/json" });
         res.end(JSON.stringify({
-            message: "Hello from Termux API server, New version deployed automatically!",
+            message: MESSAGE,
             time: new Date()
         }));
     } else {
@@ -13,6 +17,6 @@ const server = http.createServer((req, res) => {
     }
 });
 
-server.listen(3000, () => {
-    console.log("API server running on port 3000");
+server.listen(PORT, () => {
+    console.log(`API server running on port ${PORT}`);
 });

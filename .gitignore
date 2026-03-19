@@ -1,3 +1,4 @@
 node_modules
 .enc
 logs
+.env
