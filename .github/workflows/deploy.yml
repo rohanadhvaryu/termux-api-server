@@ -1,0 +1,15 @@
+name: Deploy to Termux Server
+
+on:
+  push:
+    branches:
+      - master
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Trigger Deployment
+        run: |
+          curl -X POST https://certificates-contrary-although-rocks.trycloudflare.com/deploy
